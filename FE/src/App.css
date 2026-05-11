@@ -1,0 +1,41 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.16), transparent 35%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+}
+
+.player-card {
+  width: min(100%, 960px);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 40px 120px rgba(15, 23, 42, 0.35);
+}
+
+.player-card h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.player-card p {
+  color: #cbd5e1;
+  margin-bottom: 1.75rem;
+  line-height: 1.8;
+}
+
+.video-frame {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #000;
+}
+
+video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
