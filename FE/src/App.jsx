@@ -1,6 +1,6 @@
 import './App.css';
 
-const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
+// const demoVideo = 'https://www.w3schools.com/html/mov_bbb.mp4';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <p>Play the demo video below with built-in controls.</p>
         <div className="video-frame">
           <video controls width="100%" poster="https://via.placeholder.com/960x540?text=Demo+Video">
-            <source src={demoVideo} type="video/mp4" />
+            <source src="http://localhost:3000/video" type="video/mp4" />
             Your browser does not support the HTML5 video tag.
           </video>
         </div>

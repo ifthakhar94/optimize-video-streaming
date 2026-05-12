@@ -39,3 +39,6 @@ package-lock.json
 
 # Environment variables
 .env
+
+# Video files (optional - remove if you want to commit demo videos)
+# BE/public/videos/*
