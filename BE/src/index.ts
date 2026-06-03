@@ -3,11 +3,15 @@ import express, { Response } from 'express';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
+import cors from 'cors';
 
 dotenv.config();
 
 const app = express();
 const PORT = 3000;
+
+app.use(cors());
+app.use('/dash', express.static(path.join(process.cwd(), 'video')));
 
 let totalBytesSent = 0;
 
@@ -38,7 +42,7 @@ app.use((req, res, next) => {
 
 app.get('/video', (req, res) => {
   // const videoPath = path.join(__dirname, '/videos/Masha-and-the-Bear.mp4');
-  const videoPath = path.join(process.cwd(), 'public/videos/Masha-and-the-Bear.mp4');
+  const videoPath = path.join(process.cwd(), 'video/video.mp4');
   const stat = fs.statSync(videoPath);
   const fileSize = stat.size;
   const range = req.headers.range;
